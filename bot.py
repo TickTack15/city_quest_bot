@@ -3,8 +3,9 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.utils import executor
 from geopy.distance import geodesic
+import os
 
-API_TOKEN = 'ВАШ_ТОКЕН_ОТ_@BotFather'
+API_TOKEN = os.getenv("BOT_TOKEN")  # Получаем токен из переменной окружения
 
 # Список user_id допущенных пользователей
 AUTHORIZED_USERS = {123456789, 987654321}  # замени на реальные id
